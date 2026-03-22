@@ -56,7 +56,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="import" Content="Импортировать" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="146" Click="import_Click" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Button x:Name="import" Content="Импортировать" Canvas.Left="52" FontFamily="Candara" IsEnabled="False" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="146" Click="import_Click" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -70,7 +70,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <ComboBox x:Name="list" Canvas.Left="52" Canvas.Top="109" Width="116" IsEditable="False" Foreground="#FF262C33" BorderBrush="#FF262C33" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <ComboBox x:Name="list_of_tables" Canvas.Left="52" Canvas.Top="109" Width="116" IsEditable="False" Foreground="#FF262C33" BorderBrush="#FF262C33" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="list_of_tables_SelectionChanged">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>

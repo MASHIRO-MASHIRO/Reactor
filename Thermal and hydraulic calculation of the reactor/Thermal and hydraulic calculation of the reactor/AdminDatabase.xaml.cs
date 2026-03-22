@@ -24,6 +24,8 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         public AdminDatabase()
         {
             InitializeComponent();
+
+            list_of_tables.ItemsSource = new List<string> { "role", "user", "reactor_characteristics", "control_values", "temperature_charts", "research" };
         }
 
         private void recovery_Click(object sender, RoutedEventArgs e)
@@ -50,7 +52,7 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
 
                     connection.Close();
 
-                    System.Windows.MessageBox.Show($"База данных была восстановлена", "Сообщение", MessageBoxButton.OK, MessageBoxImage.Information);
+                    System.Windows.MessageBox.Show($"База данных была восстановлена!", "Сообщение", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 catch (MySql.Data.MySqlClient.MySqlException ex)
                 {
@@ -61,12 +63,65 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
 
         private void import_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Configuration currentConfig = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
+                string host = currentConfig.AppSettings.Settings["host"].Value;
+                string uid = currentConfig.AppSettings.Settings["uid"].Value;
+                string pwd = currentConfig.AppSettings.Settings["pwd"].Value;
+                string database = currentConfig.AppSettings.Settings["database"].Value;
+                string connectionString = $"host={host};uid={uid};pwd={pwd};database={database};";
+
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+
+                dialog.DefaultExt = ".png";
+                dialog.Filter = "CSV Files (*.csv)|*.csv";
+
+                Nullable<bool> result = dialog.ShowDialog();
+
+                if (System.Windows.MessageBox.Show($"Вы уверены, что хотите импортировать данные?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+                {
+                    try
+                    {
+                        if (result == true)
+                        {
+                            string filename = dialog.FileName;
+
+                            string query = $"LOAD DATA LOCAL INFILE '{filename}' INTO TABLE {list_of_tables.SelectedItem} FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n';";
+
+                            MySqlCommand new_db = new MySqlCommand(query, connection);
+
+                            int count_strings = new_db.ExecuteNonQuery();
+
+                            System.Windows.MessageBox.Show($"Было успешно импортированно {count_strings} строк!", "Сообщение", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
+                    }
+                    catch (MySql.Data.MySqlClient.MySqlException ex)
+                    {
+                        MessageBox.Show($"Ошибка импорта данных (используйте разделитель - ;)", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+
+                connection.Close();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show($"{ex.ToString()}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void list_of_tables_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            import.IsEnabled = true;
         }
     }
 }
