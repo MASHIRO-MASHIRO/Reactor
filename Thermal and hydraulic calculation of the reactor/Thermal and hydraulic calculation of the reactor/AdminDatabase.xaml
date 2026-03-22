@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
         mc:Ignorable="d"
-        Title="Восстановление и импорт" Height="271" Width="229" Icon="/atom_icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Восстановление и импорт" Height="298" Width="229" Icon="/atom_icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF454F59" Offset="1"/>
             <GradientStop Color="#FF1D1E1E" Offset="0"/>
         </LinearGradientBrush>
     </Window.Background>
-    <Canvas Margin="0,0,0,5">
-        <Rectangle Height="183" Canvas.Left="30" Stroke="Black" Canvas.Top="22" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center">
+    <Canvas>
+        <Rectangle Height="224" Canvas.Left="30" Stroke="Black" Canvas.Top="22" Width="160" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Rectangle.Resources>
                 <Style TargetType="{x:Type Rectangle}">
                     <Setter Property="RadiusX"  Value="10"/>
@@ -28,7 +28,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <TextBlock Canvas.Left="50" TextWrapping="Wrap" TextAlignment="Center" Text="Панель действий" Canvas.Top="31" Foreground="#FF4FD9FF" Height="32" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Button x:Name="recovery" Content="Восстановить" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="70" HorizontalAlignment="Left" VerticalAlignment="Top" Click="recovery_Click">
+        <Button x:Name="recovery" Content="Восстановить" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="68" HorizontalAlignment="Center" VerticalAlignment="Top" Click="recovery_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -42,7 +42,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="exit" Content="Выйти" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="155" Click="exit_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button x:Name="exit" Content="Выйти" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="188" Click="exit_Click" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -56,7 +56,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="import" Content="Импортировать" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="112" Click="import_Click" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Button x:Name="import" Content="Импортировать" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="146" Click="import_Click" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -70,6 +70,14 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <ComboBox x:Name="list" Canvas.Left="52" Canvas.Top="109" Width="116" IsEditable="False" Foreground="#FF262C33" BorderBrush="#FF262C33" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FF262C33" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
 
     </Canvas>
 </Window>
