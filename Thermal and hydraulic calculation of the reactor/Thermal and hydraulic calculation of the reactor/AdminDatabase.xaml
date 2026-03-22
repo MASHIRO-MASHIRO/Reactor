@@ -1,0 +1,75 @@
+﻿<Window x:Class="Thermal_and_hydraulic_calculation_of_the_reactor.AdminDatabase"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
+        mc:Ignorable="d"
+        Title="Восстановление и импорт" Height="271" Width="229" Icon="/atom_icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF454F59" Offset="1"/>
+            <GradientStop Color="#FF1D1E1E" Offset="0"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Canvas Margin="0,0,0,5">
+        <Rectangle Height="183" Canvas.Left="30" Stroke="Black" Canvas.Top="22" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Resources>
+                <Style TargetType="{x:Type Rectangle}">
+                    <Setter Property="RadiusX"  Value="10"/>
+                    <Setter Property="RadiusY"  Value="10"/>
+                </Style>
+            </Rectangle.Resources>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6C737A"/>
+                    <GradientStop Color="#FF343737" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Canvas.Left="50" TextWrapping="Wrap" TextAlignment="Center" Text="Панель действий" Canvas.Top="31" Foreground="#FF4FD9FF" Height="32" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button x:Name="recovery" Content="Восстановить" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="70" HorizontalAlignment="Left" VerticalAlignment="Top" Click="recovery_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="exit" Content="Выйти" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="155" Click="exit_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="import" Content="Импортировать" Canvas.Left="52" FontFamily="Candara" FontSize="16" Height="30" Width="116" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="112" Click="import_Click" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Canvas>
+</Window>

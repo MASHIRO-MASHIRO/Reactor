@@ -109,6 +109,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminDatabase.xaml.cs">
+      <DependentUpon>AdminDatabase.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Administrator_page.xaml.cs">
       <DependentUpon>Administrator_page.xaml</DependentUpon>
     </Compile>
@@ -142,6 +145,10 @@
     <Compile Include="ViewingResearchAdmin.xaml.cs">
       <DependentUpon>ViewingResearchAdmin.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminDatabase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Administrator_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

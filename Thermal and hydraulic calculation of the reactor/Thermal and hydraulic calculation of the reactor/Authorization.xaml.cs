@@ -120,7 +120,7 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
 
                     if(login.Text == adminlogin && password.Password == adminpassword)
                     {
-                        //AdminDatabase page = AdminDatabase();
+                        AdminDatabase page = new AdminDatabase();
                         this.Hide();
                         page.ShowDialog();
                     }
