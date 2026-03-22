@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\glazo\\OneDrive\\Desktop\\Thermal and hydraulic calculation of the reactor\\",
+  "WorkspaceRootPath": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|c:\\users\\glazo\\onedrive\\desktop\\thermal and hydraulic calculation of the reactor\\thermal and hydraulic calculation of the reactor\\research_resume.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|c:\\project\\reactor\\thermal and hydraulic calculation of the reactor\\thermal and hydraulic calculation of the reactor\\research_resume.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|solutionrelative:thermal and hydraulic calculation of the reactor\\research_resume.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -20,9 +20,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Research_resume.xaml",
-              "DocumentMoniker": "C:\\Users\\glazo\\OneDrive\\Desktop\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\Research_resume.xaml",
+              "DocumentMoniker": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\Research_resume.xaml",
               "RelativeDocumentMoniker": "Thermal and hydraulic calculation of the reactor\\Research_resume.xaml",
-              "ToolTip": "C:\\Users\\glazo\\OneDrive\\Desktop\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\Research_resume.xaml",
+              "ToolTip": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\Research_resume.xaml",
               "RelativeToolTip": "Thermal and hydraulic calculation of the reactor\\Research_resume.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-03-19T19:32:01.346Z",
