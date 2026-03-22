@@ -17,6 +17,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using System.Configuration;
 
 namespace Thermal_and_hydraulic_calculation_of_the_reactor
 {
@@ -113,7 +114,16 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                     string uid = currentConfig.AppSettings.Settings["uid"].Value;
                     string pwd = currentConfig.AppSettings.Settings["pwd"].Value;
                     string database = currentConfig.AppSettings.Settings["database"].Value;
+                    string adminlogin = currentConfig.AppSettings.Settings["adminlogin"].Value;
+                    string adminpassword = currentConfig.AppSettings.Settings["adminpassword"].Value;
                     string connectionString = $"host={host};uid={uid};pwd={pwd};database={database}";
+
+                    if(login.Text == adminlogin && password.Password == adminpassword)
+                    {
+                        //AdminDatabase page = AdminDatabase();
+                        this.Hide();
+                        page.ShowDialog();
+                    }
 
                     MySqlConnection connection = new MySqlConnection(connectionString);
                     connection.Open();
