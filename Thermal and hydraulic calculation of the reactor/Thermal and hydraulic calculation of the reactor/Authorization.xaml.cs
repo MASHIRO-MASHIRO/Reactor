@@ -29,9 +29,34 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         public Regex regexPassword = new Regex(@"[^a-zA-Z0-9]");
 
         public string save_path = AppDomain.CurrentDomain.BaseDirectory + "\\image";
+        public bool captha_bool = true;
+        string sha256HashString;
+        string user_password;
+        public void GenerateCaptha()
+        {
+            String allowchar = " ";
+            allowchar = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
+            allowchar += "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,y,z";
+            allowchar += "1,2,3,4,5,6,7,8,9,0";
+            char[] a = { ',' };
+            String[] ar = allowchar.Split(a);
+            String pwd = " ";
+            string temp = " ";
+            Random r = new Random();
+            for (int i = 0; i < 4; i++)
+            {
+                temp = ar[(r.Next(0, ar.Length))];
+                pwd += temp;
+            }
+            captha.Text = pwd;
+        }
         public Authorization()
         {
             InitializeComponent();
+
+            captha.Visibility = Visibility.Hidden;
+            captha_z.Visibility = Visibility.Hidden;
+            captha_text.Visibility = Visibility.Hidden;
 
             password_show.BorderBrush = new SolidColorBrush(Color.FromArgb(100, 38, 44, 51));
             password_show.Background = new SolidColorBrush(Color.FromArgb(100, 38, 44, 51));
@@ -82,6 +107,10 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         {
             try
             {
+                if(captha_bool == false)
+                    if(captha_text.Text == captha.Text)
+                        captha_bool = true;
+
                 if (login.Text == "")
                 {
                     login.BorderBrush = new SolidColorBrush(Colors.Red);
@@ -140,7 +169,7 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                     adapter.Fill(data_table);
 
                     string user_name = data_table.Tables[0].Rows[0][1].ToString() + " " + data_table.Tables[0].Rows[0][2].ToString();
-                    string user_password = data_table.Tables[0].Rows[0][0].ToString();
+                    user_password = data_table.Tables[0].Rows[0][0].ToString();
                     string role = data_table.Tables[0].Rows[0][5].ToString();
                     string date_birth = data_table.Tables[0].Rows[0][3].ToString();
                     string mail = data_table.Tables[0].Rows[0][6].ToString();
@@ -149,9 +178,9 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
 
                     byte[] salt = GenerateSalt();
                     byte[] sha256Hash = GenerateSha256Hash(password.Password, salt);
-                    string sha256HashString = Convert.ToBase64String(sha256Hash);
+                    sha256HashString = Convert.ToBase64String(sha256Hash);
 
-                    if (sha256HashString == user_password)
+                    if (sha256HashString == user_password && captha_bool == true)
                     {
                         MessageBox.Show($"Добро пожаловать, {user_name}!", "Вход", MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -191,13 +220,37 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                     }
                     else
                     {
-                        MessageBox.Show($"Вы ввели неверный логин или пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        captha_bool = false;
+
+                        GenerateCaptha();
+                        captha_text.Text = "";
+
+                        if (sha256HashString != user_password)
+                            MessageBox.Show($"Вы ввели неверный логин или пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                        MessageBox.Show($"Введите Captha", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                        captha.Visibility = Visibility.Visible;
+                        captha_z.Visibility = Visibility.Visible;
+                        captha_text.Visibility = Visibility.Visible;
                     }
                 }
             }
             catch(System.IndexOutOfRangeException)
             {
-                MessageBox.Show($"Вы ввели неверный логин или пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                captha_bool = false;
+
+                GenerateCaptha();
+                captha_text.Text = "";
+
+                if (sha256HashString != user_password)
+                    MessageBox.Show($"Вы ввели неверный логин или пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                MessageBox.Show($"Введите Captha", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                captha.Visibility = Visibility.Visible;
+                captha_z.Visibility = Visibility.Visible;
+                captha_text.Visibility = Visibility.Visible;
             }
             catch(MySql.Data.MySqlClient.MySqlException)
             {
@@ -280,6 +333,11 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
 
             password_show.BorderBrush = new SolidColorBrush(Color.FromArgb(100, 38, 44, 51));
             password_show.Background = new SolidColorBrush(Color.FromArgb(100, 38, 44, 51));
+        }
+
+        private void captha_z_Click(object sender, RoutedEventArgs e)
+        {
+            GenerateCaptha();
         }
     }
 }

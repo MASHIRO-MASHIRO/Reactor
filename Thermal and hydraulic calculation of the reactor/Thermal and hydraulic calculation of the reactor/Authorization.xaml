@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
         mc:Ignorable="d"
-        Title="Авторизация" Height="413" Width="336" Icon="/atom_icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+        Title="Авторизация" Height="413" Width="575" Icon="/atom_icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF454F59" Offset="1"/>
@@ -17,7 +17,7 @@
         <TextBox x:Name="login" TextWrapping="NoWrap" MaxLength="20" Width="189" Height="35" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="86" Canvas.Top="193" FontFamily="Candara" TextChanged="login_TextChanged"/>
         <TextBlock Canvas.Left="103" TextWrapping="Wrap" Text="Авторизация" Canvas.Top="140" FontFamily="Candara" FontSize="24" Foreground="#FFBABFC4" HorizontalAlignment="Left" VerticalAlignment="Center" Height="32"/>
         <Canvas HorizontalAlignment="Center" Canvas.Left="1" Canvas.Top="245" VerticalAlignment="Center">
-            <TextBlock TextWrapping="Wrap" Height="60" Width="335" Background="#FF454F59" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="62"/>
+            <TextBlock TextWrapping="Wrap" Height="60" Width="573" Background="#FF454F59" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="62"/>
             <Button x:Name="entrance" Content="Войти" Canvas.Left="122" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="77" Click="entrance_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -52,5 +52,30 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="password_show" MaxLength="20" Visibility="Hidden" TextWrapping="NoWrap" Width="189" Height="35" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" Canvas.Left="86" Canvas.Top="245" FontFamily="Candara" TextChanged="password_show_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock x:Name="captha" Canvas.Left="376" TextDecorations="Strikethrough" Canvas.Top="119" Height="60" Width="160" Foreground="#FFEEF0F3" FontFamily="Candara" FontSize="36" RenderTransformOrigin="0.5,0.5" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-17.404"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="captha_z" Content="Заменить" Canvas.Left="378" FontFamily="Candara" FontSize="16" Height="30" Width="97" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="321" Click="captha_z_Click" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="captha_text" TextWrapping="NoWrap" MaxLength="4" Width="189" Height="35" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" Canvas.Left="332" Canvas.Top="245" FontFamily="Candara" TextChanged="login_TextChanged" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>

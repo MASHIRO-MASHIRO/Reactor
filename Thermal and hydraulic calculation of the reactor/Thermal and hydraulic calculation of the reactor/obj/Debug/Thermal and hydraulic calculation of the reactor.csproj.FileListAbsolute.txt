@@ -72,3 +72,48 @@ C:\Users\glazo\OneDrive\Desktop\Thermal and hydraulic calculation of the reactor
 C:\Users\glazo\OneDrive\Desktop\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ViewingResearchAdmin.baml
 C:\Users\glazo\OneDrive\Desktop\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ShowResearchAdmin.g.cs
 C:\Users\glazo\OneDrive\Desktop\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ShowResearchAdmin.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\bin\Debug\Thermal and hydraulic calculation of the reactor.exe.config
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\bin\Debug\Thermal and hydraulic calculation of the reactor.exe
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\bin\Debug\Thermal and hydraulic calculation of the reactor.pdb
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\bin\Debug\MySql.Data.dll
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\bin\Debug\System.Memory.dll
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\bin\Debug\System.Numerics.Vectors.dll
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\bin\Debug\System.Buffers.dll
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Thermal and hydraulic calculation of the reactor.csproj.AssemblyReference.cache
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\AdminDatabase.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Administrator_page.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Authorization.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ChangeUser.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\CreateUser.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\PageOfUser.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\RemoveUser.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Research_caset.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Research_energy_characteristics.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Research_resume.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ShowResearch.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ShowResearchAdmin.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ViewingResearch.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ViewingResearchAdmin.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\App.g.cs
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Thermal and hydraulic calculation of the reactor_MarkupCompile.cache
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Thermal and hydraulic calculation of the reactor_MarkupCompile.lref
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\AdminDatabase.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Administrator_page.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Authorization.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ChangeUser.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\CreateUser.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\PageOfUser.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\RemoveUser.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Research_caset.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Research_energy_characteristics.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Research_resume.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ShowResearch.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ShowResearchAdmin.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ViewingResearch.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\ViewingResearchAdmin.baml
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Thermal and hydraulic calculation of the reactor.g.resources
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Thermal and hydraulic calculation of the reactor.csproj.CoreCompileInputs.cache
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Thermal .80A451DC.Up2Date
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Thermal and hydraulic calculation of the reactor.exe
+C:\Project\Reactor\Thermal and hydraulic calculation of the reactor\Thermal and hydraulic calculation of the reactor\obj\Debug\Thermal and hydraulic calculation of the reactor.pdb
