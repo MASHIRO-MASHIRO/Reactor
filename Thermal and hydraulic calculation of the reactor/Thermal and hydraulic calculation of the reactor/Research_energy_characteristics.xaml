@@ -1,0 +1,222 @@
+﻿<Window x:Class="Thermal_and_hydraulic_calculation_of_the_reactor.Research_energy_characteristics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
+        mc:Ignorable="d"
+        Title="Создание исследования" Height="591" Width="874" Icon="/atom_icon.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closed="Window_Closed">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="#FF151515"/>
+            <GradientStop Color="#FF4E4E51" Offset="1"/>
+        </RadialGradientBrush>
+    </Window.Background>
+    <Canvas HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Image Height="378" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="204" Canvas.Top="10" Source="/energy_char_control.png" Width="609">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/energy_char_control.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Rectangle Height="132" Width="3" RadiusX="2.5" RadiusY="2.5" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="358" Canvas.Top="85">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1C5464"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="132" Width="3" RadiusX="2.5" RadiusY="2.5" Canvas.Left="370" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1C5464"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="132" Width="3" RadiusX="2.5" RadiusY="2.5" Canvas.Left="385" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1C5464"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="132" Width="3" RadiusX="2.5" RadiusY="2.5" Canvas.Left="397" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1C5464"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="132" Width="3" RadiusX="2.5" RadiusY="2.5" Canvas.Left="411" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1C5464"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="132" Width="3" RadiusX="2.5" RadiusY="2.5" Canvas.Left="423" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1C5464"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="85" Width="3" RadiusX="2.5" RadiusY="2.5" Canvas.Left="437" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1C5464"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="85" Width="4" RadiusX="2.5" RadiusY="2.5" Canvas.Left="447" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1C5464"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="98" Width="3" RadiusX="2.5" RadiusY="2.5" Canvas.Left="460" Canvas.Top="182" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5697AA"/>
+                    <GradientStop Color="#FF5697AA" Offset="1"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="0.522"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Ellipse Height="12" Canvas.Left="528" Stroke="Black" Canvas.Top="328" Width="12" Fill="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Ellipse Height="12" Canvas.Left="628" Stroke="Black" Canvas.Top="280" Width="12" Fill="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Height="90" RadiusX="2.5" RadiusY="2.5" Canvas.Left="363" Stroke="Black" Canvas.Top="186" Width="7" Fill="#B2D92D2D" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Height="90" RadiusX="2.5" RadiusY="2.5" Canvas.Left="390" Stroke="Black" Canvas.Top="186" Width="7" Fill="#B2D92D2D" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Height="90" RadiusX="2.5" RadiusY="2.5" Canvas.Left="416" Stroke="Black" Canvas.Top="186" Width="7" Fill="#B2D92D2D" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Height="90" RadiusX="2.5" RadiusY="2.5" Canvas.Left="441" Stroke="Black" Canvas.Top="186" Width="7" Fill="#B2D92D2D" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Height="11" Width="72" RadiusX="2.5" RadiusY="2.5" Canvas.Left="276" Canvas.Top="168" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5697AA"/>
+                    <GradientStop Color="#FF5697AA" Offset="1"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="0.522"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="12" Width="48" RadiusX="2.5" RadiusY="2.5" Canvas.Left="288" Canvas.Top="327" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5697AA"/>
+                    <GradientStop Color="#FF5697AA" Offset="1"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="0.522"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Height="217" RadiusX="20" RadiusY="20" Canvas.Left="553" Canvas.Top="91" Width="58" Fill="#7FD92D2D" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Height="145" Canvas.Left="21" Stroke="Black" Canvas.Top="81" Width="127" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Resources>
+                <Style TargetType="{x:Type Rectangle}">
+                    <Setter Property="RadiusX"  Value="10"/>
+                    <Setter Property="RadiusY"  Value="10"/>
+                </Style>
+            </Rectangle.Resources>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6C737A"/>
+                    <GradientStop Color="#FF343737" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Canvas.Left="24" TextWrapping="Wrap" TextAlignment="Center" Text="Панель действий" Canvas.Top="90" Foreground="#FF4FD9FF" Height="32" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="calculate" Content="Принять" Canvas.Left="39" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="133" Click="calculate_energy_Click" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="exit" Content="Назад" Canvas.Left="39" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="178" HorizontalAlignment="Left" VerticalAlignment="Center" Click="exit_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock Canvas.Left="18" TextWrapping="Wrap" Canvas.Top="17" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="242" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Характеристики зоны теплоносителя"/>
+        <Slider x:Name="temp_in_slider" Width="164" Minimum="275" Maximum="300" TickPlacement="BottomRight"  SmallChange="1" IsSnapToTickEnabled="False" Value="289"  TickFrequency="0" Canvas.Left="668" Height="36" Canvas.Top="244" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Slider.RenderTransform>
+                <RotateTransform Angle="0"/>
+            </Slider.RenderTransform>
+        </Slider>
+        <TextBlock Canvas.Left="669" TextWrapping="Wrap" Text="Температура на входе" ToolTip="Оптимальное значение: 289" Canvas.Top="220" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="20" Width="163" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label x:Name="temp_in" Content="{Binding Value, ElementName=temp_in_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0}" Canvas.Left="817" FontSize="18" FontFamily="Candara" Height="38" Width="44" Foreground="#FF4FD9FF" Canvas.Top="264" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Slider x:Name="temp_out_slider" Width="164" Minimum="300" Maximum="327" TickPlacement="BottomRight"  SmallChange="1" IsSnapToTickEnabled="False" Value="321"  TickFrequency="0" Canvas.Left="668" Height="36" Canvas.Top="65" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Slider.RenderTransform>
+                <RotateTransform Angle="0"/>
+            </Slider.RenderTransform>
+        </Slider>
+        <TextBlock Canvas.Left="669" TextWrapping="Wrap" Text="Температура на выходе" ToolTip="Оптимальное значение: 321" Canvas.Top="39" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="20" Width="180" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label x:Name="temp_out" Content="{Binding Value, ElementName=temp_out_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0}" Canvas.Left="817" FontSize="18" FontFamily="Candara" Height="32" Width="44" Foreground="#FF4FD9FF" Canvas.Top="85" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="184" TextAlignment="Right"  TextWrapping="Wrap" Text="Давление теплоносителя" ToolTip="Оптимальное значение: 16.0" Canvas.Top="198" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="48" Width="115" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Slider x:Name="pressure_slider" Width="108" Minimum="10.52" Maximum="16.20" TickPlacement="TopLeft"  SmallChange="0.1" IsSnapToTickEnabled="False" Value="16.0"  TickFrequency="0" Canvas.Left="299" Height="36" Canvas.Top="268" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <RotateTransform Angle="180"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Label x:Name="pressure" Content="{Binding Value, ElementName=pressure_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0.0}" Canvas.Left="180" FontSize="18" FontFamily="Candara" Height="38" Width="44" Foreground="#FF4FD9FF" Canvas.Top="264" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="308" TextAlignment="Center"  TextWrapping="Wrap" Text="Расход теплоносителя через активную зону" ToolTip="Оптимальное значение: 15960" Canvas.Top="380" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="48" Width="194" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Slider x:Name="expenditure_slider" Width="162" Minimum="13000" Maximum="16150" TickPlacement="BottomRight"  SmallChange="1" IsSnapToTickEnabled="False" Value="15960"  TickFrequency="0" Canvas.Left="325" Height="36" Canvas.Top="428" HorizontalAlignment="Left" VerticalAlignment="Top">
+        </Slider>
+        <Label x:Name="expenditure" Content="{Binding Value, ElementName=expenditure_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0}" Canvas.Left="321" FontSize="18" FontFamily="Candara" Height="38" Width="105" Foreground="#FF4FD9FF" Canvas.Top="448" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Ellipse Height="16" Canvas.Left="270" Stroke="#FF5697AA" Canvas.Top="166" Width="12" Fill="#FF5697AA" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Canvas HorizontalAlignment="Center" Canvas.Left="18" Canvas.Top="381" VerticalAlignment="Center">
+            <Rectangle Height="147" Stroke="Black" Width="206" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="616" Canvas.Top="-25">
+                <Rectangle.Resources>
+                    <Style TargetType="{x:Type Rectangle}">
+                        <Setter Property="RadiusX"  Value="10"/>
+                        <Setter Property="RadiusY"  Value="10"/>
+                    </Style>
+                </Rectangle.Resources>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF6C737A"/>
+                        <GradientStop Color="#FF343737" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Canvas.Left="616" TextAlignment="Center"  TextWrapping="Wrap" Text="Тепловая мощность реактора Qт, МВт" ToolTip="Оптимальное значение: 2970" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="50" Width="194" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="-14"/>
+            <Slider x:Name="power_slider" Width="162" Minimum="2750" Maximum="3060" TickPlacement="BottomRight"  SmallChange="1" IsSnapToTickEnabled="False" Value="2970"  TickFrequency="0" Canvas.Left="638" Height="36" Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="power" Content="{Binding Value, ElementName=power_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0}" Canvas.Left="634" FontSize="18" FontFamily="Candara" Height="38" Width="85" Foreground="#FF4FD9FF" Canvas.Top="69" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Canvas>
+        <TextBlock Canvas.Left="30" TextAlignment="Left"  TextWrapping="Wrap" Text="Коэффициент неравномерности энерговыделения" Canvas.Top="334" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="60" Width="202" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Slider x:Name="radius_kz_slider" Width="162" Minimum="1.02" Maximum="1.58" TickPlacement="BottomRight"  SmallChange="0.01" IsSnapToTickEnabled="False" Value="1.37"  TickFrequency="0" Canvas.Left="98" Height="37" Canvas.Top="428" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label x:Name="radius_kz" Content="{Binding Value, ElementName=radius_kz_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0.00}" Canvas.Left="88" FontSize="18" FontFamily="Candara" Height="40" Width="86" Foreground="#FF4FD9FF" Canvas.Top="448" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Slider x:Name="heigth_kr_slider" Width="162" Minimum="1.01" Maximum="1.53" TickPlacement="BottomRight"  SmallChange="0.01" IsSnapToTickEnabled="False" Value="1.50"  TickFrequency="0" Canvas.Left="98" Height="37" Canvas.Top="486" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label x:Name="heigth_kr" Content="{Binding Value, ElementName=heigth_kr_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0.00}" Canvas.Left="88" FontSize="18" FontFamily="Candara" Height="39" Width="86" Foreground="#FF4FD9FF" Canvas.Top="507" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="30" TextAlignment="Center"  TextWrapping="Wrap" Text="радиус Kz" ToolTip="Оптимальное значение: 1.37" Canvas.Top="417" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="48" Width="54" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="30" TextAlignment="Center"  TextWrapping="Wrap" Text="высота Kr" ToolTip="Оптимальное значение: 1.50" Canvas.Top="475" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="41" Width="54" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Canvas HorizontalAlignment="Center" Canvas.Left="139" Canvas.Top="10" VerticalAlignment="Center"/>
+    </Canvas>
+</Window>

@@ -1,0 +1,772 @@
+﻿<Window x:Class="Thermal_and_hydraulic_calculation_of_the_reactor.Research_caset"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
+        mc:Ignorable="d" Height="581" Width="987" Foreground="White" Title="Создание исследования" Icon="/atom_icon.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closed="Window_Closed">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="#FF404040" Offset="1"/>
+            <GradientStop Color="#FF010101" Offset="0"/>
+        </RadialGradientBrush>
+    </Window.Background>
+    <Canvas Margin="498,274,-490,-291">
+        <Ellipse Height="600" Canvas.Left="-310" Stroke="#FF2F2F2F" Canvas.Top="-295" Width="600" StrokeThickness="5">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black" Offset="0.003"/>
+                    <GradientStop Color="#FF535354" Offset="1"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Canvas HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Height="494" Width="464" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-231" Canvas.Top="-247" Source="/caset.png">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="/caset.png"/>
+                </Image.OpacityMask>
+            </Image>
+            <Button x:Name="caset1" Content="" Canvas.Left="168" Canvas.Top="-127" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FF4FD9FF" Click="caset1_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset2" Content="" Canvas.Left="168" Canvas.Top="-82" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset2_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset3" Content="" Canvas.Left="129" Canvas.Top="-106" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset3_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset4" Content="" Canvas.Left="129" Canvas.Top="-61" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset4_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset5" Content="" Canvas.Left="168" Canvas.Top="-37" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset5_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset6" Content="" Canvas.Left="89" Canvas.Top="-82" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset6_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset7" Content="" Canvas.Left="89" Canvas.Top="-172" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset7_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset8" Content="" Canvas.Left="54" Canvas.Top="-151" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset8_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset9" Content="" Canvas.Left="50" Canvas.Top="-196" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset9_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset10" Content="" Canvas.Left="15" Canvas.Top="-172" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset10_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset11" Content="" Canvas.Left="-26" Canvas.Top="-151" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset11_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset12" Content="" Canvas.Left="-26" Canvas.Top="-196" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset12_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset13" Content="" Canvas.Left="15" Canvas.Top="-220" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset13_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset14" Content="" Canvas.Left="-26" Canvas.Top="-240" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset14_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset15" Content="" Canvas.Left="-65" Canvas.Top="-172" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset15_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset16" Content="" Canvas.Left="-65" Canvas.Top="-216" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset16_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset17" Content="" Canvas.Left="-104" Canvas.Top="-196" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset17_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset18" Content="" Canvas.Left="-181" Canvas.Top="-151" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset18_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset19" Content="" Canvas.Left="-141" Canvas.Top="-127" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset19_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset20" Content="" Canvas.Left="-221" Canvas.Top="-127" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset20_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset21" Content="" Canvas.Left="-181" Canvas.Top="-106" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset21_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset22" Content="" Canvas.Left="-141" Canvas.Top="-82" Height="30" Width="30" BorderBrush="#FFFF4F4F" Foreground="#FFFF4F4F" Background="#FFFF4F4F" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset22_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset23" Content="" Canvas.Left="-65" Canvas.Top="-82" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset23_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset24" Content="" Canvas.Left="13" Canvas.Top="-84" Height="30" Width="30" BorderBrush="#FFFF4F4F" Foreground="#FFFF4F4F" Background="#FFFF4F4F" HorizontalAlignment="Left" VerticalAlignment="Top" Click="caset24_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset25" Content="" Canvas.Left="-26" Canvas.Top="-61" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset25_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset26" Content="" Canvas.Left="-65" Canvas.Top="-37" Height="30" Width="30" BorderBrush="#FFFF4F4F" Foreground="#FFFF4F4F" Background="#FFFF4F4F" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset26_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset27" Content="" Canvas.Left="-26" Canvas.Top="-15" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset27_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset28" Content="" Canvas.Left="-65" Canvas.Top="7" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset28_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset29" Content="" Canvas.Left="-104" Canvas.Top="-15" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset29_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset30" Content="" Canvas.Left="-26" Canvas.Top="29" Height="30" Width="30" BorderBrush="#FFFF4F4F" Foreground="#FFFF4F4F" Background="#FFFF4F4F" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset30_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset31" Content="" Canvas.Left="-65" Canvas.Top="52" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset31_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset32" Content="" Canvas.Left="-104" Canvas.Top="29" Height="30" Width="30" BorderBrush="#FFFF4F4F" Foreground="#FFFF4F4F" Background="#FFFF4F4F" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset32_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset33" Content="" Canvas.Left="-141" Canvas.Top="7" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset33_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset34" Content="" Canvas.Left="-181" Canvas.Top="-15" Height="30" Width="30" BorderBrush="#FFFF4F4F" Foreground="#FFFF4F4F" Background="#FFFF4F4F" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset34_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset35" Content="" Canvas.Left="-181" Canvas.Top="29" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset35_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset36" Content="" Canvas.Left="-221" Canvas.Top="-37" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset36_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset37" Content="" Canvas.Left="-221" Canvas.Top="7" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset37_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset38" Content="" Canvas.Left="-221" Canvas.Top="52" Height="30" Width="30" BorderBrush="#FFFF4F4F" Foreground="#FFFF4F4F" Background="#FFFF4F4F" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset38_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset39" Content="" Canvas.Left="-26" Canvas.Top="75" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset39_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset40" Content="" Canvas.Left="15" Canvas.Top="96" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset40_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset41" Content="" Canvas.Left="-26" Canvas.Top="120" Height="30" Width="30" BorderBrush="#FFFF4F4F" Foreground="#FFFF4F4F" Background="#FFFF4F4F" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset41_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset42" Content="" Canvas.Left="15" Canvas.Top="141" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset42_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset43" Content="" Canvas.Left="50" Canvas.Top="120" Height="30" Width="30" BorderBrush="#FFFF4F4F" Foreground="#FFFF4F4F" Background="#FFFF4F4F" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset43_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset44" Content="" Canvas.Left="89" Canvas.Top="141" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset44_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset45" Content="" Canvas.Left="54" Canvas.Top="164" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset45_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset46" Content="" Canvas.Left="15" Canvas.Top="185" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset46_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset47" Content="" Canvas.Left="-65" Canvas.Top="185" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset47_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset48" Content="" Canvas.Left="-104" Canvas.Top="164" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset48_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset49" Content="" Canvas.Left="-104" Canvas.Top="120" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset49_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset50" Content="" Canvas.Left="-141" Canvas.Top="141" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset50_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset51" Content="" Canvas.Left="-141" Canvas.Top="96" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset51_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset52" Content="" Canvas.Left="-181" Canvas.Top="120" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset52_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset53" Content="" Canvas.Left="50" Canvas.Top="-15" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset53_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset54" Content="" Canvas.Left="89" Canvas.Top="7" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset54_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset55" Content="" Canvas.Left="50" Canvas.Top="29" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset55_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset56" Content="" Canvas.Left="89" Canvas.Top="52" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset56_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset57" Content="" Canvas.Left="129" Canvas.Top="120" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset57_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset58" Content="" Canvas.Left="168" Canvas.Top="96" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset58_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset59" Content="" Canvas.Left="168" Canvas.Top="52" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset59_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset60" Content="" Canvas.Left="168" Canvas.Top="7" Height="30" Width="30" BorderBrush="#FF4FD9FF" Foreground="#FF4FD9FF" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset60_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset61" Content="" Canvas.Left="-222" Canvas.Top="93" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="4,4,4,4" Click="caset61_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset62" Content="" Canvas.Left="126" Canvas.Top="-152" Height="35" Width="36" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset62_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset63" Content="" Canvas.Left="88" Canvas.Top="-129" Height="35" Width="35" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset63_Click" RenderTransformOrigin="0.5,0.5">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="5.745"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="caset64" Content="" Canvas.Left="49" Canvas.Top="-108" Height="35" Width="35" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset64_Click" RenderTransformOrigin="0.5,0.5">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-7.326"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="caset65" Content="" Canvas.Left="10" Canvas.Top="-129" Height="35" Width="36" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset65_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset66" Content="" Canvas.Left="-28" Canvas.Top="-107" Height="35" Width="35" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset66_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset67" Content="" Canvas.Left="-68" Canvas.Top="-130" Height="36" Width="36" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset67_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset68" Content="" Canvas.Left="-106" Canvas.Top="-108" Height="35" Width="35" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset68_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset69" Content="" Canvas.Left="-106" Canvas.Top="-63" Height="35" Width="35" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset69_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset70" Content="" Canvas.Left="-144" Canvas.Top="-39" Height="35" Width="35" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset70_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset71" Content="" Canvas.Left="-184" Canvas.Top="-63" Height="35" Width="36" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="2,2,2,2" Click="caset71_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset72" Content="" Canvas.Left="-222" Canvas.Top="-84" Height="35" Width="36" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="4,4,4,4" Click="caset72_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset73" Content="" Canvas.Left="-106" Canvas.Top="-152" Height="35" Width="35" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="4,4,4,4" Click="caset73_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset74" Content="" Canvas.Left="-144" Canvas.Top="-174" Height="34" Width="35" BorderBrush="Black" Foreground="Black" Background="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="4,4,4,4" Click="caset74_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset75" Content="" Canvas.Left="-184" Canvas.Top="72" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Center" VerticalAlignment="Center" Click="caset75_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset76" Content="" Canvas.Left="-145" Canvas.Top="49" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset76_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset77" Content="" Canvas.Left="-106" Canvas.Top="72" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="2,2,2,2" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset77_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset78" Content="" Canvas.Left="-67" Canvas.Top="93" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="2,2,2,2" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset78_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset79" Content="" Canvas.Left="-67" Canvas.Top="138" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset79_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset80" Content="" Canvas.Left="-28" Canvas.Top="161" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset80_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset81" Content="" Canvas.Left="-28" Canvas.Top="206" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset81_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset82" Content="" Canvas.Left="10" Canvas.Top="49" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset82_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset83" Content="" Canvas.Left="10" Canvas.Top="4" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset83_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset84" Content="" Canvas.Left="10" Canvas.Top="-40" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset84_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset85" Content="" Canvas.Left="49" Canvas.Top="-63" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset85_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset86" Content="" Canvas.Left="88" Canvas.Top="-40" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset86_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset87" Content="" Canvas.Left="49" Canvas.Top="72" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset87_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset88" Content="" Canvas.Left="88" Canvas.Top="93" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset88_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset89" Content="" Canvas.Left="127" Canvas.Top="72" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset89_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset90" Content="" Canvas.Left="127" Canvas.Top="26" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset90_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="caset91" Content="" Canvas.Left="127" Canvas.Top="-18" Height="36" Width="36" BorderBrush="Black" Foreground="White" Background="#FF4FD9FF" BorderThickness="4,4,4,4" HorizontalAlignment="Left" VerticalAlignment="Center" Click="caset91_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <TextBlock x:Name="count_caset" Canvas.Left="305" TextWrapping="Wrap" TextAlignment="Center" Canvas.Top="-215" Height="39" Width="67" FontFamily="Candara" FontSize="20" Foreground="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Slider x:Name="tvel_slider" Width="137" Minimum="270" Maximum="317" TickPlacement="TopLeft"  SmallChange="1" IsSnapToTickEnabled="False" Value="317"  TickFrequency="0" Canvas.Left="452" Height="36" Canvas.Top="-60" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Slider.RenderTransform>
+                    <RotateTransform Angle="180"></RotateTransform>
+                </Slider.RenderTransform>
+            </Slider>
+            <Label x:Name="tvel" Content="{Binding ElementName=tvel_slider, Path=Value, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0}" Canvas.Left="311" Canvas.Top="-64" FontSize="18" FontFamily="Candara" Height="33" Width="45" Foreground="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Canvas>
+        <TextBlock Canvas.Left="312" TextWrapping="Wrap" Text="Количество ТВЭЛ в кассете" ToolTip="Оптимальное значение: 317" TextAlignment="Right" Canvas.Top="-129" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="51" Width="139" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="-477" TextWrapping="Wrap" Text="Высота H а.з, м" ToolTip="Оптимальное значение: 3.55" Canvas.Top="72" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="24" Width="112" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Slider x:Name="radius_slider" Width="114" Minimum="1.05" Maximum="1.56" TickPlacement="BottomRight"  SmallChange="0.01" IsSnapToTickEnabled="False" Value="1.56"  TickFrequency="0" Canvas.Left="-482" Height="36" Canvas.Top="-13" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Slider.RenderTransform>
+                <RotateTransform Angle="0"/>
+            </Slider.RenderTransform>
+        </Slider>
+        <TextBlock Canvas.Left="-478" TextWrapping="Wrap" Text="Радиус R а.з, м" ToolTip="Оптимальное значение: 1.56" Canvas.Top="-37" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="20" Width="112" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label x:Name="radius" Content="{Binding Value, ElementName=radius_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0.00}" Canvas.Left="-390" FontSize="18" FontFamily="Candara" Height="32" Width="44" Foreground="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="5"/>
+        <Slider x:Name="heigth_slider" Width="142" Minimum="2.95" Maximum="3.55" TickPlacement="BottomRight"  SmallChange="0.01" IsSnapToTickEnabled="False" Value="3.55"  TickFrequency="0" Canvas.Left="-481" Height="36" Canvas.Top="96" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Slider.RenderTransform>
+                <RotateTransform Angle="0"/>
+            </Slider.RenderTransform>
+        </Slider>
+        <Label x:Name="heigth" Content="{Binding Value, ElementName=heigth_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0.00}" Canvas.Left="-361" Canvas.Top="114" FontSize="18" FontFamily="Candara" Height="33" Width="44" Foreground="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Slider x:Name="effective_slider" Width="230" Minimum="0.091" Maximum="0.104" TickPlacement="BottomRight"  SmallChange="0.001" IsSnapToTickEnabled="False" Value="0.104"  TickFrequency="0" Canvas.Left="-482" Height="36" Canvas.Top="207" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Slider.RenderTransform>
+                <RotateTransform Angle="0"/>
+            </Slider.RenderTransform>
+        </Slider>
+        <Label x:Name="effective" Content="{Binding Value, ElementName=effective_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0.000}" Canvas.Left="-274" Canvas.Top="225" FontSize="18" FontFamily="Candara" Height="33" Width="61" Foreground="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock Canvas.Left="-481" TextWrapping="Wrap" Text="Эффективная добавка δ эфф, м" ToolTip="Оптимальное значение: 0.104" Canvas.Top="178" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="24" Width="230" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="-477" TextWrapping="Wrap" Text="Характеристики активной зоны реактора" Canvas.Top="-259" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="191" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="236" TextWrapping="Wrap" TextAlignment="Center" Canvas.Top="-259" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Text="Количество гексагональных топливных кассет" ToolTip="Оптимальное значение: 151" Width="205" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Height="145" Canvas.Left="-477" Stroke="Black" Canvas.Top="-195" Width="127" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.Resources>
+                <Style TargetType="Rectangle">
+                    <Setter Property="RadiusX"  Value="10"/>
+                    <Setter Property="RadiusY"  Value="10"/>
+                </Style>
+            </Rectangle.Resources>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6C737A"/>
+                    <GradientStop Color="#FF343737" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Canvas.Left="-474" TextWrapping="Wrap" TextAlignment="Center" Text="Панель действий" Canvas.Top="-186" Foreground="#FF4FD9FF" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Canvas.Left="312" TextWrapping="Wrap" Text="Шаг расположения кассет h, м" ToolTip="Оптимальное значение: 0.241" TextAlignment="Right" Canvas.Top="-3" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="51" Width="139" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Slider x:Name="step_slider" Width="140" Minimum="0.172" Maximum="0.241" TickPlacement="TopLeft"  SmallChange="0.001" IsSnapToTickEnabled="False" Value="0.241"  TickFrequency="0" Canvas.Left="452" Height="36" Canvas.Top="66" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Slider.RenderTransform>
+                <RotateTransform Angle="180"/>
+            </Slider.RenderTransform>
+        </Slider>
+        <Label x:Name="step" Content="{Binding Value, ElementName=step_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0.000}" Canvas.Left="301" Canvas.Top="62" FontSize="18" FontFamily="Candara" Height="33" Width="59" Foreground="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Canvas.Left="312" TextWrapping="Wrap" Text="Толщина стенки кассеты δст, м" ToolTip="Оптимальное значение: 0.0015" TextAlignment="Right" Canvas.Top="114" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="52" Width="139" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Slider x:Name="thickness_slider" Width="168" Minimum="0.0001" Maximum="0.0015" TickPlacement="TopLeft"  SmallChange="0.0001" IsSnapToTickEnabled="False" Value="0.0015"  TickFrequency="0" Canvas.Left="452" Height="36" Canvas.Top="184" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Slider.RenderTransform>
+                <RotateTransform Angle="180"/>
+            </Slider.RenderTransform>
+        </Slider>
+        <Label x:Name="thickness" Content="{Binding Value, ElementName=thickness_slider, UpdateSourceTrigger=PropertyChanged}" ContentStringFormat="{}{0:0.0000}" Canvas.Left="272" Canvas.Top="180" FontSize="18" FontFamily="Candara" Height="32" Width="70" Foreground="#FF4FD9FF" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="calculate" Content="Принять" Canvas.Left="-459" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="-143" HorizontalAlignment="Center" VerticalAlignment="Top" Click="calculate_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="exit" Content="Выйти" Canvas.Left="-459" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="-98" HorizontalAlignment="Left" VerticalAlignment="Top" Click="exit_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Canvas>
+</Window>

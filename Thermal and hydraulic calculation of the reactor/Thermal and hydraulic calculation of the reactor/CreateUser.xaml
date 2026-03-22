@@ -1,0 +1,125 @@
+﻿<Window x:Class="Thermal_and_hydraulic_calculation_of_the_reactor.CreateUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
+        mc:Ignorable="d"
+        Title="Создание пользователя" Height="549" Width="494" Background="#FF161616" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed" Icon="/atom_icon.png">
+    <Grid Margin="0,0,-17,-35">
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF525961"/>
+                <GradientStop Color="#FF282F37" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="login" TextWrapping="NoWrap" MaxLength="20" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" FontFamily="Candara" Margin="233,35,63,479" TextChanged="login_TextChanged"/>
+        <TextBlock TextWrapping="Wrap" Background="#FF454F59" Margin="198,35,261,479"/>
+        <TextBlock TextWrapping="Wrap" Background="#FF454F59" Margin="198,87,261,427"/>
+        <PasswordBox x:Name="password" VerticalContentAlignment="Center" MaxLength="20" FontFamily="Candara" FontSize="16" SelectionBrush="#FF262C33" BorderBrush="#FF262C33" Foreground="#FF4FD9FF" Background="#FF262C33" Margin="233,87,63,427"/>
+        <Image Source="/user.png" Margin="202,41,264,488">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/user.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBlock TextWrapping="Wrap" Background="#FF3AADCD" Margin="198,141,261,373"/>
+        <Image Source="/mail.png" Margin="200,146,266,378">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/mail.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBox x:Name="last_name" ToolTip="Фамилия" MaxLength="50" TextWrapping="NoWrap" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" FontFamily="Candara" Margin="198,233,65,281" TextChanged="last_name_TextChanged"/>
+        <TextBox x:Name="first_name" TextWrapping="NoWrap" MaxLength="50" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" FontFamily="Candara" Margin="198,287,65,227" TextChanged="first_name_TextChanged"/>
+        <TextBox x:Name="middle_name" TextWrapping="NoWrap" MaxLength="50" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" FontFamily="Candara" Margin="198,340,65,174" TextChanged="middle_name_TextChanged"/>
+        <TextBlock x:Name="text_admin" TextWrapping="Wrap" Text="администратор" FontFamily="Candara" FontSize="14" Foreground="#FFBABFC4" Margin="59,472,331,60"/>
+        <CheckBox x:Name="check_admin" Content="CheckBox" Margin="40,474,435,56" Click="check"/>
+        <TextBlock x:Name="text_is" TextWrapping="Wrap" Text="права на исследования" FontFamily="Candara" FontSize="14" Foreground="#FFBABFC4" Margin="287,472,0,60"/>
+        <CheckBox x:Name="check_is" Content="CheckBox" Margin="268,474,207,56" IsChecked="False" Click="check1"/>
+        <Rectangle Stroke="Black" Margin="22,32,344,372">
+            <Rectangle.Resources>
+                <Style TargetType="{x:Type Rectangle}">
+                    <Setter Property="RadiusX"  Value="10"/>
+                    <Setter Property="RadiusY"  Value="10"/>
+                </Style>
+            </Rectangle.Resources>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6C737A"/>
+                    <GradientStop Color="#FF343737" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Панель действий" Foreground="#FF4FD9FF" Margin="26,41,348,476"/>
+        <Button x:Name="create_user" Content="Создать" FontFamily="Candara" FontSize="16" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Margin="40,84,364,435" Click="create_user_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="exit" Content="Назад" FontFamily="Candara" FontSize="16" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Margin="40,129,364,390" Click="exit_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <DatePicker x:Name="date" BorderBrush="#FF262C33" Background="#FF262C33" Margin="198,401,65,119" SelectedDateFormat="Short" FontFamily="Candara" FontSize="18" IsDropDownOpen="False"  IsTodayHighlighted="True">
+            <DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="IsReadOnly" Value="True"/>
+                    <Setter Property="Text" Value="Дата рождения"/>
+                    <Setter Property="TextDecorations" Value="None"/>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+        <Image x:Name="image" Margin="40,250,358,189">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/background.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="select_image" Content="Выбрать фото" FontFamily="Candara" FontSize="16" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Margin="32,373,350,146" Click="select_image_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="mail" MaxLength="20" TextWrapping="NoWrap" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" FontFamily="Candara" Margin="233,141,63,373" TextChanged="last_name_TextChanged"/>
+        <Label x:Name="last_name_label" Content="Фамилия" IsHitTestVisible="False" HorizontalAlignment="Left" Margin="197,233,0,0" VerticalAlignment="Top" Height="28" Width="141" FontSize="18" FontFamily="Candara" Foreground="#FF6C737A"/>
+        <Label x:Name="first_name_label" Content="Имя" IsHitTestVisible="False" HorizontalAlignment="Left" Margin="196,287,0,0" VerticalAlignment="Top" Height="28" Width="147" FontSize="18" FontFamily="Candara" Foreground="#FF6C737A"/>
+        <Label x:Name="middle_name_label" Content="Отчество" IsHitTestVisible="False" HorizontalAlignment="Left" Margin="196,340,0,0" VerticalAlignment="Top" Height="28" Width="147" FontSize="18" FontFamily="Candara" Foreground="#FF6C737A"/>
+        <Button x:Name="password_generation" HorizontalAlignment="Left" Margin="436,90,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.507,0.52" Height="30" BorderBrush="#00707070" Click="password_generation_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/password generation.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="password_visible" HorizontalAlignment="Left" Margin="204,92,0,0" VerticalAlignment="Top" Width="24" Height="24" BorderBrush="#00707070" Click="password_visible_Click" AutomationProperties.IsRowHeader="True">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="password_show" TextWrapping="NoWrap" MaxLength="20" Visibility="Hidden" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" FontFamily="Candara" Margin="233,87,63,427" TextChanged="last_name_TextChanged"/>
+    </Grid>
+</Window>

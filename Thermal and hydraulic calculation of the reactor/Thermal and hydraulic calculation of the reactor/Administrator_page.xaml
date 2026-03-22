@@ -1,0 +1,262 @@
+﻿<Window x:Class="Thermal_and_hydraulic_calculation_of_the_reactor.Administrator_page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
+        mc:Ignorable="d"
+        Title="Страница администратора" Height="649" Width="494" Background="#FF161616" Icon="/atom_icon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
+    <Canvas Margin="507,367,0,0">
+        <TextBlock TextWrapping="Wrap" Height="151" Width="494" Canvas.Top="-366" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-507">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF454F59"/>
+                    <GradientStop Color="#FF1D1E1E" Offset="0.995"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock Canvas.Left="-507" TextWrapping="Wrap" Canvas.Top="-215" HorizontalAlignment="Left" VerticalAlignment="Center" Width="494" Height="50" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF1F2225" Offset="1"/>
+                    <GradientStop Color="#FF262C33" Offset="0"/>
+                </RadialGradientBrush>
+            </TextBlock.Background>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="login_user" Canvas.Left="-317" TextWrapping="Wrap" Canvas.Top="-316" FontFamily="Candara" Foreground="#FF4FD9FF" HorizontalAlignment="Left" VerticalAlignment="Center" Width="195"/>
+        <Canvas HorizontalAlignment="Center" Canvas.Left="-507" Canvas.Top="-160" VerticalAlignment="Center">
+            <TextBlock TextWrapping="Wrap" Height="426" Width="258" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF262C33"/>
+                        <GradientStop Color="#FF0E1114" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="10" Foreground="#FFBABFC4" FontFamily="Candara" FontSize="16" Text="Панель действий" Width="130" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Canvas HorizontalAlignment="Center" Canvas.Left="66" Canvas.Top="-3" VerticalAlignment="Center">
+                <TextBlock TextWrapping="Wrap" Width="70" Height="202" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-1" Canvas.Top="-1">
+                    <TextBlock.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF454F59" Offset="1"/>
+                            <GradientStop Color="#FF0E1114" Offset="0"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Background>
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="-90"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <Button x:Name="Create_user" Content="Создать" Canvas.Left="34" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="94" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Create_user_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                            <GradientStop Color="#FF2A7886" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <TextBlock x:Name="panel" Canvas.Left="-58" TextWrapping="Wrap"  Canvas.Top="72" Foreground="#FFBABFC4" FontFamily="Candara" Width="160" Height="29" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Создать пользователя"/>
+            </Canvas>
+            <Canvas HorizontalAlignment="Center" Canvas.Left="65" Canvas.Top="78" VerticalAlignment="Center">
+                <TextBlock TextWrapping="Wrap" Width="70" Height="203" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <TextBlock.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF2E3339" Offset="1"/>
+                            <GradientStop Color="#FF0E1114" Offset="0"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Background>
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="-90"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock Canvas.Left="-57" TextWrapping="Wrap"  Canvas.Top="73" Foreground="#FFBABFC4" FontFamily="Candara" Width="160" Text="Изменить пользователя" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Button x:Name="Change_user" Content="Изменить" Canvas.Left="35" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="95" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Change_user_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                            <GradientStop Color="#FF2A7886" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </Canvas>
+            <TextBlock TextWrapping="Wrap" Width="70" Height="203" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Canvas.Left="66" Canvas.Top="161" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2E3339" Offset="1"/>
+                        <GradientStop Color="#FF0E1114" Offset="0"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-90"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Width="70" Height="203" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Canvas.Left="66" Canvas.Top="245" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2E3339" Offset="1"/>
+                        <GradientStop Color="#FF0E1114" Offset="0"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-90"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <Button x:Name="exit" Content="Выйти" Canvas.Left="101" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="341" Click="exit_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                        <GradientStop Color="#FF2A7886" Offset="0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBlock Canvas.Left="9" TextWrapping="Wrap"  Canvas.Top="319" Foreground="#FFBABFC4" FontFamily="Candara" Width="160" Text="Завершить сеанс" Height="22" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Canvas.Left="9" TextWrapping="Wrap"  Canvas.Top="236" Foreground="#FFBABFC4" FontFamily="Candara" Width="160" Text="Удалить пользователя" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button x:Name="Remove_user" Content="Удалить" Canvas.Left="101" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="257" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Remove_user_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                        <GradientStop Color="#FF2A7886" Offset="0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Canvas>
+        <Image x:Name="image" Height="110" Canvas.Left="-479" Canvas.Top="-346" Width="96" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/background.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBlock x:Name="username" Canvas.Left="-369" TextWrapping="Wrap" Canvas.Top="-295" HorizontalAlignment="Left" FontFamily="Candara" FontSize="18" Foreground="#FF4FD9FF" Width="286" Height="23" VerticalAlignment="Center"/>
+        <TextBlock x:Name="birth" Canvas.Left="-390" TextWrapping="Wrap" Canvas.Top="-198" Foreground="#FF4FD9FF" FontFamily="Candara" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Height="15"/>
+        <Label x:Name="time" Content="" Height="36" Canvas.Left="-189" Canvas.Top="-359" Width="155" FontFamily="Candara" FontSize="18" Foreground="#FFBABFC4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock x:Name="login_user_Копировать" Canvas.Left="-369" TextWrapping="Wrap" Canvas.Top="-316" FontFamily="Candara" Foreground="#FFBABFC4" Width="66" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Профиль"/>
+        <TextBlock x:Name="role_user" Canvas.Left="-369" TextWrapping="Wrap" Canvas.Top="-268" FontFamily="Candara" HorizontalAlignment="Left" VerticalAlignment="Center" Width="151" Height="20" Foreground="#B24FD9FF"/>
+        <Image x:Name="permit" ToolTip="абсолютные права" Height="22" Canvas.Left="-395" Canvas.Top="-346" Width="20" Source="/privileges.png" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/privileges.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBlock x:Name="sgerherh" Canvas.Left="-479" TextWrapping="Wrap" Canvas.Top="-198" FontFamily="Candara" Foreground="#FFBABFC4" Width="96" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Дата рождения"/>
+        <Canvas HorizontalAlignment="Center" Canvas.Left="-244" Canvas.Top="-160" VerticalAlignment="Center">
+            <TextBlock TextWrapping="Wrap" Height="426" Width="231" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF262C33"/>
+                        <GradientStop Color="#FF0E1114" Offset="1"/>
+                        <GradientStop Color="#FF262C33"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+        </Canvas>
+        <Image Height="53" Width="94" Source="/atom.png" Canvas.Left="-208" Canvas.Top="-128" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/atom.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <TextBlock Canvas.Left="-136" TextWrapping="Wrap" Canvas.Top="-118" Foreground="#FFBABFC4" FontFamily="Candara" FontSize="9" Text="Лаборатория теплогидравлического расчета" Width="90" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Canvas HorizontalAlignment="Center" Canvas.Left="-162" Canvas.Top="-131" VerticalAlignment="Center">
+            <TextBlock TextWrapping="Wrap" Width="70" Height="200" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="14" Canvas.Top="15">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF454F59" Offset="0"/>
+                        <GradientStop Color="#FF0E1114" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-90"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock Canvas.Left="-41" TextWrapping="Wrap"  Canvas.Top="86" Foreground="#FFBABFC4" FontFamily="Candara" Width="160" Text="Архив данных исследований" Height="29" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="archive" Content="Найти" Canvas.Left="-41" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="109" HorizontalAlignment="Center" VerticalAlignment="Top" Click="archive_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                        <GradientStop Color="#FF2A7886" Offset="0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Canvas>
+        <Canvas HorizontalAlignment="Center" Canvas.Left="-163" Canvas.Top="-47" VerticalAlignment="Center">
+            <TextBlock TextWrapping="Wrap" Width="70" Height="201" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="15" Canvas.Top="13">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2E3339" Offset="0"/>
+                        <GradientStop Color="#FF0E1114" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-90"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock Canvas.Left="-40" TextWrapping="Wrap"  Canvas.Top="85" Foreground="#FFBABFC4" FontFamily="Candara" Width="160" Text="Исследовательские данные" Height="29" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="archive_remove" Content="Очистить" Canvas.Left="-39" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="108" HorizontalAlignment="Center" VerticalAlignment="Top" Click="archive_remove_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                        <GradientStop Color="#FF2A7886" Offset="0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Canvas>
+        <TextBlock x:Name="mail_user" Canvas.Left="-163" TextWrapping="Wrap" Canvas.Top="-198" Foreground="#FF4FD9FF" FontFamily="Candara" Width="141" Height="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Image Height="28" Canvas.Left="-200" Canvas.Top="-204" Width="30" HorizontalAlignment="Left" VerticalAlignment="Center" Source="/mail.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/mail.png"/>
+            </Image.OpacityMask>
+        </Image>
+    </Canvas>
+</Window>

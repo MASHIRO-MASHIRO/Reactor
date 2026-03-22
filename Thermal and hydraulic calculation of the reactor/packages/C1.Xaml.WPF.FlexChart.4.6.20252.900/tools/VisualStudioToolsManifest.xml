@@ -1,0 +1,11 @@
+﻿<FileList>
+  <File Reference = "C1.WPF.FlexChart.4.6.2.dll">
+    <ToolboxItems UIFramework="WPF" VSCategory="C1 WPF Controls(4.6)" BlendCategory="C1 WPF Controls(4.6)">
+      <Item Type="C1.WPF.Chart.C1FlexChart" />
+      <Item Type="C1.WPF.Chart.C1FlexPie" />
+      <Item Type="C1.WPF.Chart.C1Sunburst" />
+      <Item Type="C1.WPF.Chart.C1FlexRadar" />
+      <Item Type="C1.WPF.Chart.C1TreeMap" />
+    </ToolboxItems>
+  </File>
+</FileList>

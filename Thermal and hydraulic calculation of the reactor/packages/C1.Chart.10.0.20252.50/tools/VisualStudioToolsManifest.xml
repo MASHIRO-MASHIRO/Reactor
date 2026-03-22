@@ -1,0 +1,6 @@
+﻿<FileList>
+  <File Reference="C1.Chart.dll">
+    <ToolboxItems VSCategory="C1 Controls" BlendCategory="C1 Controls">
+    </ToolboxItems>
+  </File>
+</FileList>
