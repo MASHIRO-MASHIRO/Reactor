@@ -18,6 +18,7 @@ using System.Data;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Configuration;
+using System.Threading;
 
 namespace Thermal_and_hydraulic_calculation_of_the_reactor
 {
@@ -32,6 +33,7 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         public bool captha_bool = true;
         string sha256HashString;
         string user_password;
+        string captha_value;
         public void GenerateCaptha()
         {
             String allowchar = " ";
@@ -49,6 +51,7 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                 pwd += temp;
             }
             captha.Text = pwd;
+            captha_value = pwd;
         }
         public Authorization()
         {
@@ -105,12 +108,13 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         /// <param name="e"></param>
         private void entrance_Click(object sender, RoutedEventArgs e)
         {
+            if (captha_bool == false)
+                Thread.Sleep(10000);
+
+            if (!(captha_text.Text == captha_value))
+                captha_bool = true;
             try
             {
-                if(captha_bool == false)
-                    if(captha_text.Text == captha.Text)
-                        captha_bool = true;
-
                 if (login.Text == "")
                 {
                     login.BorderBrush = new SolidColorBrush(Colors.Red);
@@ -147,9 +151,17 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                     string adminpassword = currentConfig.AppSettings.Settings["adminpassword"].Value;
                     string connectionString = $"host={host};uid={uid};pwd={pwd};database={database}";
 
-                    if(login.Text == adminlogin && password.Password == adminpassword)
+                    if(login.Text == adminlogin && password.Password == adminpassword && captha_bool == true)
                     {
-                        AdminDatabase page = new AdminDatabase();
+                        captha_text.Text = "";
+
+                        captha.Visibility = Visibility.Hidden;
+                        captha_z.Visibility = Visibility.Hidden;
+                        captha_text.Visibility = Visibility.Hidden;
+
+                        captha_bool = true;
+
+                        AdminDatabase page = new AdminDatabase(this);
                         this.Hide();
                         page.ShowDialog();
                     }
@@ -189,8 +201,15 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                         login.Text = "";
                         password.Password = "";
                         password_show.Text = "";
+                        captha_text.Text = "";
 
-                        if(password_show.Visibility == Visibility.Visible)
+                        captha_bool = true;
+
+                        captha.Visibility = Visibility.Hidden;
+                        captha_z.Visibility = Visibility.Hidden;
+                        captha_text.Visibility = Visibility.Hidden;
+
+                        if (password_show.Visibility == Visibility.Visible)
                         {
                             password_show.Visibility = Visibility.Hidden;
                             password.Visibility = Visibility.Visible;
@@ -222,8 +241,9 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                     {
                         captha_bool = false;
 
-                        GenerateCaptha();
                         captha_text.Text = "";
+
+                        GenerateCaptha();
 
                         if (sha256HashString != user_password)
                             MessageBox.Show($"Вы ввели неверный логин или пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -240,8 +260,9 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
             {
                 captha_bool = false;
 
-                GenerateCaptha();
                 captha_text.Text = "";
+
+                GenerateCaptha();
 
                 if (sha256HashString != user_password)
                     MessageBox.Show($"Вы ввели неверный логин или пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);

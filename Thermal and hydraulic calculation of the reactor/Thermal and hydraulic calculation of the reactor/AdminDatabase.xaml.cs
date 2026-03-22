@@ -21,11 +21,13 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
     /// </summary>
     public partial class AdminDatabase : Window
     {
-        public AdminDatabase()
+        Authorization _page;
+        public AdminDatabase(Authorization page)
         {
             InitializeComponent();
 
             list_of_tables.ItemsSource = new List<string> { "role", "user", "reactor_characteristics", "control_values", "temperature_charts", "research" };
+            _page = page;
         }
 
         private void recovery_Click(object sender, RoutedEventArgs e)
@@ -116,12 +118,25 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                this.Close();
+                _page.ShowDialog();
+            }
+            catch (System.InvalidOperationException)
+            {
+            }
         }
 
         private void list_of_tables_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             import.IsEnabled = true;
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            this.Close();
+            _page.ShowDialog();
         }
     }
 }
