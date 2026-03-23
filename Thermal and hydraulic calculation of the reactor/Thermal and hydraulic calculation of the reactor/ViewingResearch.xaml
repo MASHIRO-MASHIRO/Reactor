@@ -115,5 +115,33 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
+        <Button x:Name="contin" Content="→" Canvas.Left="856" FontFamily="Candara" FontSize="24" Height="30" Width="32" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="381" Click="contin_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="back" Content="←" Canvas.Left="813" FontFamily="Candara" FontSize="24" Height="30" Width="32" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="381" Click="back_Click" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF4FD9FF" Offset="1"/>
+                    <GradientStop Color="#FF2A7886" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Canvas>
 </Window>

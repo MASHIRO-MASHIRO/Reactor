@@ -404,5 +404,15 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
             control_values.UpdateLayout();
             control_values.ScrollIntoView(dv);
         }
+
+        private void contin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
