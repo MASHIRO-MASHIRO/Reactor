@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
         mc:Ignorable="d"
-        Title="Изменение пользователя" Height="549" Width="494" Background="#FF161616" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed" Icon="/atom_icon.png">
+        Title="Изменение пользователя" Height="549" Width="494" Background="#FF161616" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/atom_icon.png">
     <Grid Margin="0,0,-17,-35">
         <Grid.Background>
             <RadialGradientBrush>

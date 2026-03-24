@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
         xmlns:Charting="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization" x:Class="Thermal_and_hydraulic_calculation_of_the_reactor.ShowResearch"
         mc:Ignorable="d"
-        Title="Просмотр данных исследования" Height="666" Width="1041" Icon="/atom_icon.png" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
+        Title="Просмотр данных исследования" Height="666" Width="1041" Icon="/atom_icon.png" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <RadialGradientBrush>
             <GradientStop Color="#FF646C74"/>

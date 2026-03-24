@@ -7,7 +7,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor" xmlns:dvc="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
         mc:Ignorable="d"
-        Title="Завершение исследования" Height="671" Width="1041" Icon="/atom_icon.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closed="research_resume_Closed">
+        Title="Завершение исследования" Height="671" Width="1041" Icon="/atom_icon.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.Background>
         <RadialGradientBrush>
             <GradientStop Color="#FF282F37" Offset="1"/>

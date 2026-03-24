@@ -9,9 +9,11 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using MySql.Data.MySqlClient;
 
 namespace Thermal_and_hydraulic_calculation_of_the_reactor
@@ -21,15 +23,46 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
     /// </summary>
     public partial class AdminDatabase : Window
     {
+        DispatcherTimer _timer;
+        TimeSpan _time;
+
         Authorization _page;
         public AdminDatabase(Authorization page)
         {
             InitializeComponent();
 
+            _time = TimeSpan.FromSeconds(30);
+
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                if (_time == TimeSpan.Zero) _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
+
+            _timer.Start();
+
+            ComponentDispatcher.ThreadIdle += new System.EventHandler(ComponentDispatcher_ThreadIdle);
+
             list_of_tables.ItemsSource = new List<string> { "role", "user", "reactor_characteristics", "control_values", "temperature_charts", "research" };
             _page = page;
         }
+        void ComponentDispatcher_ThreadIdle(object sender, EventArgs e)
+        {
+            if (_time.TotalSeconds == 0)
+            {
+                _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+                foreach (System.Windows.Window w in App.Current.Windows)
+                {
+                    if (w != this)
+                        w.Hide();
+                }
+                Authorization page = new Authorization();
+                this.Close();
+                page.ShowDialog();
+            }
 
+        }
         private void recovery_Click(object sender, RoutedEventArgs e)
         {
             if(System.Windows.MessageBox.Show($"Вы уверены, что хотите восстановить базу данных (данные будут удалены)?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
@@ -135,8 +168,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            this.Close();
-            _page.ShowDialog();
         }
     }
 }

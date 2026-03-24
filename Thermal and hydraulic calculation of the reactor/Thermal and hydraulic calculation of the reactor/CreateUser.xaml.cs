@@ -14,9 +14,11 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Microsoft.Office.Interop.Excel;
 using MySql.Data.MySqlClient;
 
@@ -27,6 +29,9 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
     /// </summary>
     public partial class CreateUser : System.Windows.Window
     {
+        System.Windows.Threading.DispatcherTimer _timer;
+        TimeSpan _time;
+
         static public Regex regexPassword = new Regex(@"[^a-zA-Z0-9]");
         public Regex regexR = new Regex(@"[^а-яА-Я-]");
 
@@ -36,6 +41,23 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         public string image_name = "user_image.png";
 
         static private Administrator_page _page;
+        void ComponentDispatcher_ThreadIdle(object sender, EventArgs e)
+        {
+            if (_time.TotalSeconds == 0)
+            {
+                _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+                foreach (System.Windows.Window w in App.Current.Windows)
+                {
+                    if (w != this)
+                        w.Hide();
+                }
+                Authorization page = new Authorization();
+                this.Close();
+                page.ShowDialog();
+            }
+
+        }
         /// <summary>
         /// Генерация соли для пароля
         /// </summary>
@@ -107,6 +129,18 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         public CreateUser(Administrator_page page, string login)
         {
             InitializeComponent();
+
+            _time = TimeSpan.FromSeconds(30);
+
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                if (_time == TimeSpan.Zero) _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, System.Windows.Application.Current.Dispatcher);
+
+            _timer.Start();
+
+            ComponentDispatcher.ThreadIdle += new System.EventHandler(ComponentDispatcher_ThreadIdle);
 
             Image newIcon = new Image();
             newIcon.Source = new BitmapImage(new Uri(path + "\\" + "password_hide.png"));
@@ -429,7 +463,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         /// <param name="e"></param>
         private void Window_Closed(object sender, EventArgs e)
         {
-            _page.ShowDialog();
         }
 
         private void password_generation_Click(object sender, RoutedEventArgs e)

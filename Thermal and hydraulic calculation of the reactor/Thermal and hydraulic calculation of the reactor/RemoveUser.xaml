@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
         mc:Ignorable="d"
-        Title="Удаление пользователя" Height="254" Width="494" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closed="Window_Closed" Icon="/atom_icon.png">
+        Title="Удаление пользователя" Height="254" Width="494" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/atom_icon.png">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF525961"/>

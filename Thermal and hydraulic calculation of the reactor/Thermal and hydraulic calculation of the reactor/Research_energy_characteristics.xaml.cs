@@ -8,9 +8,11 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Thermal_and_hydraulic_calculation_of_the_reactor
 {
@@ -22,6 +24,9 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         static Research_caset _page;
         static private string _login;
 
+        System.Windows.Threading.DispatcherTimer _timer;
+        TimeSpan _time;
+
         static int count_caset;
         static int tvel;
         static double radius;
@@ -29,6 +34,23 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         static double effective;
         static double step;
         static double thickness;
+        void ComponentDispatcher_ThreadIdle(object sender, EventArgs e)
+        {
+            if (_time.TotalSeconds == 0)
+            {
+                _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+                foreach (System.Windows.Window w in App.Current.Windows)
+                {
+                    if (w != this)
+                        w.Hide();
+                }
+                Authorization page = new Authorization();
+                this.Close();
+                page.ShowDialog();
+            }
+
+        }
         public Research_energy_characteristics(Research_caset page, int count_caset_value, int tvel_value, double radius_value, double heigth_value, double effective_value, double step_value, double thickness_value, string login)
         {
             _page = page;
@@ -44,6 +66,18 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
             thickness = thickness_value;
 
             InitializeComponent();
+
+            _time = TimeSpan.FromSeconds(30);
+
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                if (_time == TimeSpan.Zero) _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
+
+            _timer.Start();
+
+            ComponentDispatcher.ThreadIdle += new System.EventHandler(ComponentDispatcher_ThreadIdle);
         }
         /// <summary>
         /// Возвращение на форму "Создание исследования - характеристики активной зоны реактора"
@@ -97,14 +131,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         /// <param name="e"></param>
         private void Window_Closed(object sender, EventArgs e)
         {
-            try
-            {
-                this.Hide();
-                _page.ShowDialog();
-            }
-            catch (System.InvalidOperationException)
-            {
-            }
         }
     }
 }

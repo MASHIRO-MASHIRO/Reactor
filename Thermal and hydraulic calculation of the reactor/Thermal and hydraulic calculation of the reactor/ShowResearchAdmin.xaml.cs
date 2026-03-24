@@ -10,9 +10,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using MySql.Data.MySqlClient;
 
 namespace Thermal_and_hydraulic_calculation_of_the_reactor
@@ -22,6 +24,9 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
     /// </summary>
     public partial class ShowResearchAdmin : Window
     {
+        System.Windows.Threading.DispatcherTimer _timer;
+        TimeSpan _time;
+
         static int _id;
         static string title_research;
         static string status_research;
@@ -58,9 +63,38 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         static string a;
         static string delt;
         static string tvm;
+        void ComponentDispatcher_ThreadIdle(object sender, EventArgs e)
+        {
+            if (_time.TotalSeconds == 0)
+            {
+                _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+                foreach (System.Windows.Window w in App.Current.Windows)
+                {
+                    if (w != this)
+                        w.Hide();
+                }
+                Authorization page = new Authorization();
+                this.Close();
+                page.ShowDialog();
+            }
+
+        }
         public ShowResearchAdmin(int id)
         {
             InitializeComponent();
+
+            _time = TimeSpan.FromSeconds(30);
+
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                if (_time == TimeSpan.Zero) _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
+
+            _timer.Start();
+
+            ComponentDispatcher.ThreadIdle += new System.EventHandler(ComponentDispatcher_ThreadIdle);
 
             _id = id;
 
@@ -281,7 +315,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         /// <param name="e"></param>
         private void Window_Closed(object sender, EventArgs e)
         {
-            this.Close();
         }
     }
 }

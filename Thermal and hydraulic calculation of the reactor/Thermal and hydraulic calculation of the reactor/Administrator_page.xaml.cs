@@ -42,7 +42,7 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         {
             InitializeComponent();
 
-            _time = TimeSpan.FromSeconds(5);
+            _time = TimeSpan.FromSeconds(30);
 
             _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {

@@ -19,6 +19,7 @@ using MySqlX.XDevAPI.Common;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Diagnostics;
 using System.Windows.Threading;
+using System.Windows.Interop;
 
 namespace Thermal_and_hydraulic_calculation_of_the_reactor
 {
@@ -27,6 +28,9 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
     /// </summary>
     public partial class Research_resume : Window
     {
+        System.Windows.Threading.DispatcherTimer _timer;
+        TimeSpan _time;
+
         double ql0;
         double effective_h;
         double G0;
@@ -53,6 +57,23 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         static double pressure;
         static double radius_kz;
         static double heigth_kr;
+        void ComponentDispatcher_ThreadIdle(object sender, EventArgs e)
+        {
+            if (_time.TotalSeconds == 0)
+            {
+                _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+                foreach (System.Windows.Window w in App.Current.Windows)
+                {
+                    if (w != this)
+                        w.Hide();
+                }
+                Authorization page = new Authorization();
+                this.Close();
+                page.ShowDialog();
+            }
+
+        }
         public Research_resume(Research_caset page1, Research_energy_characteristics page2, int count_caset_value, int tvel_value, double radius_value, double heigth_value, double effective_value, double step_value, double thickness_value, int power_value, int temp_in_value, int temp_out_value, int expenditure_value, double pressure_value, double radius_kz_value, double heigth_kr_value, string login)
         {
             _page1 = page1;
@@ -78,6 +99,18 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
             heigth_kr = heigth_kr_value;
             
             InitializeComponent();
+
+            _time = TimeSpan.FromSeconds(30);
+
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                if (_time == TimeSpan.Zero) _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
+
+            _timer.Start();
+
+            ComponentDispatcher.ThreadIdle += new System.EventHandler(ComponentDispatcher_ThreadIdle);
 
             Configuration currentConfig = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
@@ -638,8 +671,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         /// <param name="e"></param>
         private void research_resume_Closed(object sender, EventArgs e)
         {
-            this.Close();
-            _page2.ShowDialog();
         }
     }
 }

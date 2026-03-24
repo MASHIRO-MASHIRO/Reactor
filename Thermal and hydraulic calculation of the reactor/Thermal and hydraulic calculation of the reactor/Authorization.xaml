@@ -76,6 +76,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="captha_text" TextWrapping="NoWrap" MaxLength="4" Width="189" Height="35" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" Canvas.Left="332" Canvas.Top="245" FontFamily="Candara" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="captha_text" TextWrapping="NoWrap" Width="189" Height="35" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" Canvas.Left="332" Canvas.Top="245" FontFamily="Candara" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>

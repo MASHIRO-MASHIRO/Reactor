@@ -314,10 +314,12 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         /// <param name="e"></param>
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            /*
             if (MessageBox.Show($"Вы уверены, что хотите выйти из приложения?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
                 Application.Current.Shutdown();
             else
                 e.Cancel = true;
+            */
         }
 
         private void password_visible_Click(object sender, RoutedEventArgs e)

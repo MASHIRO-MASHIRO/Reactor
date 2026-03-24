@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Thermal_and_hydraulic_calculation_of_the_reactor"
         mc:Ignorable="d"
-        Title="Создание исследования" Height="591" Width="874" Icon="/atom_icon.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closed="Window_Closed">
+        Title="Создание исследования" Height="591" Width="874" Icon="/atom_icon.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.Background>
         <RadialGradientBrush>
             <GradientStop Color="#FF151515"/>

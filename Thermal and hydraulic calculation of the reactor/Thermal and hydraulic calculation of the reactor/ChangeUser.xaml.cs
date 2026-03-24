@@ -45,7 +45,16 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         {
             if (_time.TotalSeconds == 0)
             {
+                _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+                foreach (System.Windows.Window w in App.Current.Windows)
+                {
+                    if (w != this)
+                        w.Hide();
+                }
+                Authorization page = new Authorization();
                 this.Close();
+                page.ShowDialog();
             }
 
         }
@@ -128,7 +137,7 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         {
             InitializeComponent();
 
-            _time = TimeSpan.FromSeconds(5);
+            _time = TimeSpan.FromSeconds(30);
 
             _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
@@ -554,8 +563,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         /// <param name="e"></param>
         private void Window_Closed(object sender, EventArgs e)
         {
-            this.Close();
-            _page.ShowDialog();
         }
 
         private void password_generation_Click(object sender, RoutedEventArgs e)
