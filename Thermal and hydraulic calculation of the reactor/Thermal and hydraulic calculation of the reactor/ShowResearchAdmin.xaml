@@ -29,8 +29,8 @@ mc:Ignorable="d"
             </Rectangle.Fill>
         </Rectangle>
         <TextBlock Canvas.Left="50" TextWrapping="Wrap" TextAlignment="Center" Text="Панель действий" Canvas.Top="66" Foreground="#FF4FD9FF" Height="32" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox x:Name="title" TextWrapping="NoWrap" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" FontFamily="Candara" Height="34" Canvas.Left="225" Canvas.Top="106" Width="237" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True"/>
-        <TextBlock Canvas.Left="225" TextWrapping="Wrap" Canvas.Top="76" Foreground="#FF4FD9FF" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Language="ru-ru" Text="Название:"/></TextBlock>
+        <TextBox x:Name="title" TextWrapping="NoWrap" VerticalContentAlignment="Center" Background="#FF262C33" SelectionBrush="#FF2A3038" BorderBrush="#FF262C33" FontSize="18" Foreground="#FF4FD9FF" FontFamily="Candara" Height="34" Canvas.Left="224" Canvas.Top="57" Width="237" HorizontalAlignment="Center" VerticalAlignment="Top" IsReadOnly="True"/>
+        <TextBlock Canvas.Left="224" TextWrapping="Wrap" Canvas.Top="27" Foreground="#FF4FD9FF" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="ru-ru" Text="Название:"/></TextBlock>
         <Canvas Height="467" Width="755" Canvas.Left="231" Canvas.Top="89" HorizontalAlignment="Center" VerticalAlignment="Top">
             <WindowsFormsHost Height="232" Width="392" Canvas.Left="364" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="-16">
                 <Charting:Chart x:Name="chart1"/>
@@ -56,8 +56,8 @@ mc:Ignorable="d"
             </Rectangle.Fill>
         </Rectangle>
         <TextBlock Canvas.Left="46" TextWrapping="Wrap" Canvas.Top="228" Foreground="#FF4FD9FF" FontSize="16" FontFamily="Candara" Height="40" Width="277" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Text="Теплогидравлические характе"/><Run Language="ru-ru" Text="р"/><Run Text="истики"/><Run Text=":"/></TextBlock>
-        <TextBlock Canvas.Left="225" TextWrapping="Wrap" Canvas.Top="156" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Language="ru-ru" Text="Статус исследования:"/></TextBlock>
-        <TextBlock x:Name="status" Canvas.Left="386" TextWrapping="Wrap" Canvas.Top="156" Foreground="ForestGreen" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Language="ru-ru" Text="Успешное"/></TextBlock>
+        <TextBlock Canvas.Left="224" TextWrapping="Wrap" Canvas.Top="107" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="ru-ru" Text="Статус исследования:"/></TextBlock>
+        <TextBlock x:Name="status" Canvas.Left="385" TextWrapping="Wrap" Canvas.Top="107" Foreground="ForestGreen" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="ru-ru" Text="Успешное"/></TextBlock>
         <Button x:Name="exit" Content="Назад" Canvas.Left="65" FontFamily="Candara" FontSize="16" Height="30" Width="90" Foreground="#FFEEF0F3" RenderTransformOrigin="0.5,0.5" Canvas.Top="103" Click="exit_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -72,6 +72,12 @@ mc:Ignorable="d"
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <TextBlock Canvas.Left="225" TextWrapping="Wrap" Canvas.Top="134" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="152" Text="ФИО:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock Canvas.Left="225" TextWrapping="Wrap" Canvas.Top="159" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="152" Text="Дата рождения:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock Canvas.Left="225" TextWrapping="Wrap" Canvas.Top="188" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="152" Text="Email:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock x:Name="FIO" Canvas.Left="269" TextWrapping="Wrap" Canvas.Top="134" Foreground="#FF4FD9FF" FontSize="16" FontFamily="Candara" Height="40" Width="290" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Language="ru-ru" Text=""/></TextBlock>
+        <TextBlock x:Name="date" Canvas.Left="345" TextWrapping="Wrap" Canvas.Top="159" Foreground="#FF4FD9FF" FontSize="16" FontFamily="Candara" Height="40" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Language="ru-ru" Text=""/></TextBlock>
+        <TextBlock x:Name="mail_per" Canvas.Left="273" TextWrapping="Wrap" Canvas.Top="188" Foreground="#FF4FD9FF" FontSize="16" FontFamily="Candara" Height="40" Width="240" HorizontalAlignment="Left" VerticalAlignment="Center"><Run x:Name="mail" Language="ru-ru" Text=""/></TextBlock>
 
     </Canvas>
 </Window>

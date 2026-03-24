@@ -69,7 +69,7 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            string query = $"SELECT id_research, success_research, title_research, date_research, login_user, CONCAT_WS(' ', last_name_user, first_name_user, middle_name_user) as FIO FROM research INNER JOIN user  ON id_user = user_id_research;";
+            string query = $"SELECT id_research, success_research, title_research, date_research, login_user, '************' as FIO, '******', '******' FROM research INNER JOIN user  ON id_user = user_id_research;";
 
             MySqlCommand select = new MySqlCommand(query, connection);
 
@@ -90,6 +90,8 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
             control_values.Columns[3].Header = "Дата";
             control_values.Columns[4].Header = "Логин сотрудника";
             control_values.Columns[5].Header = "ФИО сотрудника";
+            control_values.Columns[6].Header = "Дата рождения";
+            control_values.Columns[7].Header = "Почта";
 
             control_values.ScrollIntoView(control_values.Items[control_values.Items.Count - 1]);
         }

@@ -101,6 +101,13 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <TextBlock Canvas.Left="221" TextWrapping="Wrap" Canvas.Top="181" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Center" VerticalAlignment="Top" Text="ФИО:"/>
+        <TextBlock Canvas.Left="221" TextWrapping="Wrap" Canvas.Top="154" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Language="ru-ru" Text="Статус исследования:"/></TextBlock>
+        <TextBlock Canvas.Left="221" TextWrapping="Wrap" Canvas.Top="206" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Дата рождения:"/>
+        <TextBlock Canvas.Left="221" TextWrapping="Wrap" Canvas.Top="235" Foreground="#FFBABFC4" FontSize="16" FontFamily="Candara" Height="40" Width="151" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Email:"/>
+        <TextBlock x:Name="FIO" Canvas.Left="264" TextWrapping="Wrap" Canvas.Top="181" Foreground="#FF4FD9FF" FontSize="16" FontFamily="Candara" Height="40" Width="290" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Language="ru-ru" Text=""/></TextBlock>
+        <TextBlock x:Name="date" Canvas.Left="340" TextWrapping="Wrap" Canvas.Top="206" Foreground="#FF4FD9FF" FontSize="16" FontFamily="Candara" Height="40" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"><Run Language="ru-ru" Text=""/></TextBlock>
+        <TextBlock x:Name="mail_per" Canvas.Left="268" TextWrapping="Wrap" Canvas.Top="235" Foreground="#FF4FD9FF" FontSize="16" FontFamily="Candara" Height="40" Width="241" HorizontalAlignment="Left" VerticalAlignment="Center"><Run x:Name="mail" Language="ru-ru" Text=""/></TextBlock>
 
     </Canvas>
 </Window>

@@ -75,6 +75,19 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
+            string select_personal_data = $"SELECT CONCAT_WS(' ', last_name_user, first_name_user, middle_name_user) as FIO, DATE_FORMAT(date_birth_user, '%M %d %Y') as date, mail_user as mail FROM user WHERE id_user = (SELECT user_id_research FROM research WHERE id_research = {id});";
+
+            MySqlCommand select_personal = new MySqlCommand(select_personal_data, connection);
+
+            MySqlDataAdapter adapter_personal = new MySqlDataAdapter(select_personal);
+
+            System.Data.DataTable data_personal = new System.Data.DataTable();
+            adapter_personal.Fill(data_personal);
+
+            FIO.Text = Convert.ToString(data_personal.Rows[0][0]);
+            date.Text = Convert.ToString(data_personal.Rows[0][1]);
+            mail_per.Text = Convert.ToString(data_personal.Rows[0][2]);
+
             // Получение детальных данных исследования из базы данных
 
             string data_query = $"SELECT title_research, success_research, date_research FROM research WHERE id_research = {_id};";

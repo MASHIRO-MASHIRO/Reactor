@@ -47,8 +47,8 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
 
             _page = page;
 
-            list.ItemsSource = new List<string> { "Статус", "Логин", "ФИО" };
-            list_sort.ItemsSource = new List<string> { "Статус", "Логин", "ФИО" };
+            list.ItemsSource = new List<string> { "Статус", "Логин" };
+            list_sort.ItemsSource = new List<string> { "Статус", "Логин" };
             sort_value.ItemsSource = new List<string> { "Возрастание", "Убывание" };
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            string query = $"SELECT id_research, success_research, title_research, date_research, login_user, CONCAT_WS(' ', last_name_user, first_name_user, middle_name_user) as FIO FROM research INNER JOIN user  ON id_user = user_id_research;";
+            string query = $"SELECT id_research, success_research, title_research, date_research, login_user, '************' as FIO, '******', '******' FROM research INNER JOIN user ON id_user = user_id_research;";
 
             MySqlCommand select = new MySqlCommand(query, connection);
 
@@ -87,6 +87,8 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
             control_values.Columns[3].Header = "Дата";
             control_values.Columns[4].Header = "Логин сотрудника";
             control_values.Columns[5].Header = "ФИО сотрудника";
+            control_values.Columns[6].Header = "Дата рождения";
+            control_values.Columns[7].Header = "Почта";
 
             control_values.ScrollIntoView(control_values.Items[control_values.Items.Count - 1]);
         }
@@ -171,24 +173,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                         }
                     }
                 }
-                else if (Convert.ToString(list.SelectedItem) == "ФИО")
-                {
-                    foreach (var item in control_values.Items)
-                    {
-                        var row = control_values.ItemContainerGenerator.ContainerFromItem(item) as DataGridRow;
-                        if (row != null && control_values.Columns[2].GetCellContent(row) != null && control_values.Columns[5].GetCellContent(row) != null)
-                        {
-                            TextBlock tbl = control_values.Columns[2].GetCellContent(row) as TextBlock;
-                            TextBlock tbl_worker = control_values.Columns[5].GetCellContent(row) as TextBlock;
-                            if (!tbl_worker.Text.Contains(filter.Text))
-                                continue;
-                            if (!tbl.Text.Contains(show_row.Text))
-                                row.Visibility = Visibility.Collapsed;
-                            else
-                                row.Visibility = Visibility.Visible;
-                        }
-                    }
-                }
                 else if (Convert.ToString(list.SelectedItem) == "Логин")
                 {
                     foreach (var item in control_values.Items)
@@ -235,21 +219,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                         }
                     }
                 }
-                else if (Convert.ToString(list.SelectedItem) == "ФИО")
-                {
-                    foreach (var item in control_values.Items)
-                    {
-                        var row = control_values.ItemContainerGenerator.ContainerFromItem(item) as DataGridRow;
-                        if (row != null && control_values.Columns[5].GetCellContent(row) != null)
-                        {
-                            TextBlock tbl = control_values.Columns[5].GetCellContent(row) as TextBlock;
-                            if (!tbl.Text.Contains(filter.Text))
-                                row.Visibility = Visibility.Collapsed;
-                            else
-                                row.Visibility = Visibility.Visible;
-                        }
-                    }
-                }
                 else if (Convert.ToString(list.SelectedItem) == "Логин")
                 {
                     foreach (var item in control_values.Items)
@@ -280,24 +249,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                             if (!tbl.Text.Contains(show_row.Text))
                                 continue;
                             if (!tbl_status.Text.Contains(filter.Text))
-                                row.Visibility = Visibility.Collapsed;
-                            else
-                                row.Visibility = Visibility.Visible;
-                        }
-                    }
-                }
-                else if (Convert.ToString(list.SelectedItem) == "ФИО")
-                {
-                    foreach (var item in control_values.Items)
-                    {
-                        var row = control_values.ItemContainerGenerator.ContainerFromItem(item) as DataGridRow;
-                        if (row != null && control_values.Columns[2].GetCellContent(row) != null && control_values.Columns[5].GetCellContent(row) != null)
-                        {
-                            TextBlock tbl = control_values.Columns[2].GetCellContent(row) as TextBlock;
-                            TextBlock tbl_worker = control_values.Columns[5].GetCellContent(row) as TextBlock;
-                            if (!tbl.Text.Contains(show_row.Text))
-                                continue;
-                            if (!tbl_worker.Text.Contains(filter.Text))
                                 row.Visibility = Visibility.Collapsed;
                             else
                                 row.Visibility = Visibility.Visible;
@@ -392,13 +343,6 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
                     dv.Sort = "login_user asc";
                 else
                     dv.Sort = "login_user desc";
-            }
-            else if (list_sort.SelectedItem.ToString() == "ФИО" && sort_value.SelectedItem != null)
-            {
-                if (sort_value.SelectedItem.ToString() == "Возрастание")
-                    dv.Sort = "FIO asc";
-                else
-                    dv.Sort = "FIO desc";
             }
 
             control_values.UpdateLayout();

@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|c:\\project\\reactor\\thermal and hydraulic calculation of the reactor\\thermal and hydraulic calculation of the reactor\\viewingresearch.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|solutionrelative:thermal and hydraulic calculation of the reactor\\viewingresearch.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|c:\\project\\reactor\\thermal and hydraulic calculation of the reactor\\thermal and hydraulic calculation of the reactor\\showresearchadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|solutionrelative:thermal and hydraulic calculation of the reactor\\showresearchadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|c:\\project\\reactor\\thermal and hydraulic calculation of the reactor\\thermal and hydraulic calculation of the reactor\\showresearch.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|solutionrelative:thermal and hydraulic calculation of the reactor\\showresearch.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|c:\\project\\reactor\\thermal and hydraulic calculation of the reactor\\thermal and hydraulic calculation of the reactor\\viewingresearchadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|solutionrelative:thermal and hydraulic calculation of the reactor\\viewingresearchadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|c:\\project\\reactor\\thermal and hydraulic calculation of the reactor\\thermal and hydraulic calculation of the reactor\\viewingresearch.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|solutionrelative:thermal and hydraulic calculation of the reactor\\viewingresearch.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|c:\\project\\reactor\\thermal and hydraulic calculation of the reactor\\thermal and hydraulic calculation of the reactor\\showresearchadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|solutionrelative:thermal and hydraulic calculation of the reactor\\showresearchadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|c:\\project\\reactor\\thermal and hydraulic calculation of the reactor\\thermal and hydraulic calculation of the reactor\\showresearch.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{73A8262D-8312-4799-818B-89439EB70830}|Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor.csproj|solutionrelative:thermal and hydraulic calculation of the reactor\\showresearch.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,27 +38,78 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ViewingResearchAdmin.xaml.cs",
+              "DocumentMoniker": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ViewingResearchAdmin.xaml.cs",
+              "RelativeDocumentMoniker": "Thermal and hydraulic calculation of the reactor\\ViewingResearchAdmin.xaml.cs",
+              "ToolTip": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ViewingResearchAdmin.xaml.cs",
+              "RelativeToolTip": "Thermal and hydraulic calculation of the reactor\\ViewingResearchAdmin.xaml.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwFgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T05:29:49.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShowResearchAdmin.xaml.cs",
+              "DocumentMoniker": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ShowResearchAdmin.xaml.cs",
+              "RelativeDocumentMoniker": "Thermal and hydraulic calculation of the reactor\\ShowResearchAdmin.xaml.cs",
+              "ToolTip": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ShowResearchAdmin.xaml.cs",
+              "RelativeToolTip": "Thermal and hydraulic calculation of the reactor\\ShowResearchAdmin.xaml.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAQwE0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T05:29:07.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ShowResearch.xaml.cs",
+              "DocumentMoniker": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ShowResearch.xaml.cs",
+              "RelativeDocumentMoniker": "Thermal and hydraulic calculation of the reactor\\ShowResearch.xaml.cs",
+              "ToolTip": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ShowResearch.xaml.cs",
+              "RelativeToolTip": "Thermal and hydraulic calculation of the reactor\\ShowResearch.xaml.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAQwFcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T05:06:02.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ViewingResearch.xaml.cs",
               "DocumentMoniker": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ViewingResearch.xaml.cs",
               "RelativeDocumentMoniker": "Thermal and hydraulic calculation of the reactor\\ViewingResearch.xaml.cs",
               "ToolTip": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ViewingResearch.xaml.cs",
               "RelativeToolTip": "Thermal and hydraulic calculation of the reactor\\ViewingResearch.xaml.cs",
-              "ViewState": "AgIAAJEBAAAAAAAAAAAYwJ4BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwFkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-23T21:20:41.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ViewingResearch.xaml",
-              "DocumentMoniker": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ViewingResearch.xaml",
-              "RelativeDocumentMoniker": "Thermal and hydraulic calculation of the reactor\\ViewingResearch.xaml",
-              "ToolTip": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ViewingResearch.xaml",
-              "RelativeToolTip": "Thermal and hydraulic calculation of the reactor\\ViewingResearch.xaml",
+              "DocumentIndex": 4,
+              "Title": "ShowResearchAdmin.xaml",
+              "DocumentMoniker": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ShowResearchAdmin.xaml",
+              "RelativeDocumentMoniker": "Thermal and hydraulic calculation of the reactor\\ShowResearchAdmin.xaml",
+              "ToolTip": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ShowResearchAdmin.xaml",
+              "RelativeToolTip": "Thermal and hydraulic calculation of the reactor\\ShowResearchAdmin.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-23T21:16:00.096Z",
+              "WhenOpened": "2026-03-24T05:28:07.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShowResearch.xaml",
+              "DocumentMoniker": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ShowResearch.xaml",
+              "RelativeDocumentMoniker": "Thermal and hydraulic calculation of the reactor\\ShowResearch.xaml",
+              "ToolTip": "C:\\Project\\Reactor\\Thermal and hydraulic calculation of the reactor\\Thermal and hydraulic calculation of the reactor\\ShowResearch.xaml",
+              "RelativeToolTip": "Thermal and hydraulic calculation of the reactor\\ShowResearch.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-24T05:02:04.365Z",
               "EditorCaption": ""
             }
           ]
