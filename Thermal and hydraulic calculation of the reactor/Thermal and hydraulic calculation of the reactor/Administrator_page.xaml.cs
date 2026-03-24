@@ -10,10 +10,13 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Thermal_and_hydraulic_calculation_of_the_reactor
 {
@@ -22,11 +25,34 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
     /// </summary>
     public partial class Administrator_page : Window
     {
+        DispatcherTimer _timer;
+        TimeSpan _time;
+
         Authorization page_;
         public string save_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData) + "\\save_image";
+        void ComponentDispatcher_ThreadIdle(object sender, EventArgs e)
+        {
+            if(_time.TotalSeconds == 0)
+            {
+                this.Close();
+            }
+
+        }
         public Administrator_page(Authorization page, string login, string user_name, string date_birth, string mail, string image_admin)
         {
             InitializeComponent();
+
+            _time = TimeSpan.FromSeconds(5);
+
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                if (_time == TimeSpan.Zero) _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
+
+            _timer.Start();
+
+            ComponentDispatcher.ThreadIdle += new System.EventHandler(ComponentDispatcher_ThreadIdle);
 
             page_ = page;
 

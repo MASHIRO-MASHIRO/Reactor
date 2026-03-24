@@ -13,9 +13,11 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using MySql.Data.MySqlClient;
 
 namespace Thermal_and_hydraulic_calculation_of_the_reactor
@@ -25,6 +27,9 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
     /// </summary>
     public partial class ChangeUser : Window
     {
+        System.Windows.Threading.DispatcherTimer _timer;
+        TimeSpan _time;
+
         static public Regex regexPassword = new Regex(@"[^a-zA-Z0-9]");
         public Regex regexD = new Regex(@"[^a-zA-Z0-9]!#\$%&\*()_");
         public Regex regexR = new Regex(@"[^а-яА-Я-]");
@@ -36,7 +41,14 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
 
         Administrator_page _page;
         string login_name;
+        void ComponentDispatcher_ThreadIdle(object sender, EventArgs e)
+        {
+            if (_time.TotalSeconds == 0)
+            {
+                this.Close();
+            }
 
+        }
         public string GeneratePassword(int length)
         {
             const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -115,6 +127,18 @@ namespace Thermal_and_hydraulic_calculation_of_the_reactor
         public ChangeUser(Administrator_page page, string login)
         {
             InitializeComponent();
+
+            _time = TimeSpan.FromSeconds(5);
+
+            _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                if (_time == TimeSpan.Zero) _timer.Stop();
+                _time = _time.Add(TimeSpan.FromSeconds(-1));
+            }, Application.Current.Dispatcher);
+
+            _timer.Start();
+
+            ComponentDispatcher.ThreadIdle += new System.EventHandler(ComponentDispatcher_ThreadIdle);
 
             Image newIcon = new Image();
             newIcon.Source = new BitmapImage(new Uri(path + "\\" + "password_hide.png"));
